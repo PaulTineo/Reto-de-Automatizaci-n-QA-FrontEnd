@@ -4,7 +4,19 @@
   "description": "Reto de Automatizacion QA Front End",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cucumber-js",
+
+    "chrome": "cross-env BROWSER=chromium cucumber-js",
+
+    "edge": "cross-env BROWSER=edge cucumber-js",
+
+    "firefox": "cross-env BROWSER=firefox cucumber-js",
+
+    "test:dev": "cross-env ENV=dev cucumber-js",
+
+    "test:qa": "cross-env ENV=qa cucumber-js",
+
+    "test:prod": "cross-env ENV=prod cucumber-js"
   },
   "keywords": [],
   "author": "",
